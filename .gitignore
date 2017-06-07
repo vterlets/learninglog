@@ -95,3 +95,12 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# exclude db files
+
+*.sqlite3
+
+# exclude idea dir
+
+.idea/
+.idea/*
+
