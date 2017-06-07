@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning logs</title>
+</head>
+<body>
+
+<h1> Topic '{{ topic }}' </h1>
+
+<ul>
+
+{% for entry in topic.entry_set.all %}
+    <li>
+        {{ entry }}
+    </li>
+{% endfor %}
+
+</ul>
+
+
+</body>
+</html>

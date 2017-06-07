@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning logs</title>
+</head>
+<body>
+
+<h1> Topics </h1>
+
+<ul>
+
+{% comment %}
+{% endcomment %}
+
+{% for topic in topics %}
+    <li>
+        <a href="{% url 'learninglogs:topic_entries' pk=topic.pk %}">{{ topic }}</a>
+        {% comment %}
+        {% endcomment %}
+        <i> - created {{ topic.date_added }}  </i>
+        <ul>
+        {% for entry in entries %}
+            {% if entry.topic == topic %}
+                <li>
+                        {{ entry }}
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </li>
+{% endfor %}
+
+</ul>
+
+
+</body>
+</html>
