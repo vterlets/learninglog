@@ -99,8 +99,8 @@ ENV/
 
 *.sqlite3
 
-# exclude idea dir
+# exclude idea files that contains passwords
 
-.idea/
-.idea/*
+.idea/dataSources.ids
+.idea/dataSources.xml
 
