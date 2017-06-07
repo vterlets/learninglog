@@ -25,7 +25,7 @@ SECRET_KEY = 'qe^31q4lct8tm$$+(0=(2^mqwm)#bveatnhaaa!$m(iybu)d5r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vterlets.pythonanywhere.com']
 
 
 # Application definition
