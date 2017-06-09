@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Learning logs</title>
-</head>
-<body>
+{% extends "learninglogs/base.html" %}
+{% block title %} Title from index.html {% endblock %}
+
+{% block content %}
+
 
 <h1> Topics </h1>
 
 <ul>
-
-{% comment %}
-{% endcomment %}
-
 {% for topic in topics %}
     <li>
         <a href="{% url 'learninglogs:topic_entries' pk=topic.pk %}">{{ topic }}</a>
@@ -30,9 +24,18 @@
         </ul>
     </li>
 {% endfor %}
+<ul>
 
-</ul>
+{% comment %}
+
+<div>
+    <a href="{% url 'topic_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</div>
+
+{% endcomment %}
 
 
-</body>
-</html>
+{% endblock %}
+
+
+
