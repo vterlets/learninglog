@@ -13,11 +13,6 @@
 
 <body>
 
-    <div>
-        <a href="{% url 'topic_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-    </div>
-
-
     <div id="sidebar">
         {% block sidebar %}
         <ul>
@@ -27,6 +22,12 @@
 
         {% endblock %}
     </div>
+
+    <div>
+        <a href="{% url 'learninglogs:topic_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>add new topic</a>
+    </div>
+
+
 
     <div id="content">
         {% block content %}
