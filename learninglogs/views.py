@@ -18,4 +18,4 @@ def topic_entries(request, pk):
 def topic_new(request):
     """Form to add new topics"""
     form = TopicForm
-    return render(request, 'learninglogs/topic_edit.html', {'form': form})
+    return render(request, 'learninglogs/topic_new.html', {'form': form})
